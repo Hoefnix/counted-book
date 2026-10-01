@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Counted, Johannes Smits | Sci-Fi Novel — Coming November 2026</title>
+  <meta name="description" content="The ledger is open. Everything is counted. A sci-fi novel by Johannes Smits — coming November 2026.">
+  <meta name="author" content="Johannes Smits">
+
+  <!-- Open Graph Meta Tags (WhatsApp, Facebook, LinkedIn, etc.) -->
+  <meta property="og:type" content="book">
+  <meta property="og:site_name" content="Johannes Smits">
+  <meta property="og:title" content="Counted, by Johannes Smits">
+  <meta property="og:description" content="The ship is running out of everything. The war Mala started isn't something she can finish on fumes. The ledger is open. Everything is counted.">
+  <meta property="og:url" content="https://counted.johannessmits.nl/">
+  <meta property="og:image" content="https://counted.johannessmits.nl/cover.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:alt" content="Counted Book Cover">
+  <meta property="book:author" content="Johannes Smits">
+  <meta property="book:genre" content="Science Fiction">
+  <meta property="book:release_date" content="2026-11">
+
+  <!-- Twitter / X Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Counted, by Johannes Smits">
+  <meta name="twitter:description" content="The ship is running out of everything. The war Mala started isn't something she can finish on fumes. The ledger is open. Everything is counted.">
+  <meta name="twitter:image" content="https://counted.johannessmits.nl/cover.jpg">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #06070a;
+      --card-bg: rgba(13, 17, 26, 0.78);
+      --card-border: rgba(255, 255, 255, 0.1);
+      --text-main: #e6edf3;
+      --text-muted: #9ba3af;
+      --accent: #e25822;
+      --accent-hover: #f06a35;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.65;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 3rem 1.2rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .bg-blur {
+      position: fixed;
+      top: -10%;
+      left: -10%;
+      width: 120%;
+      height: 120%;
+      background-image: url('cover.jpg');
+      background-position: center bottom;
+      background-size: cover;
+      background-repeat: no-repeat;
+      filter: blur(70px) brightness(0.35) saturate(1.4);
+      transform: scale(1.1);
+      z-index: -2;
+      pointer-events: none;
+    }
+
+    .bg-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 30%, rgba(6, 7, 10, 0.4) 0%, rgba(6, 7, 10, 0.9) 100%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .container {
+      max-width: 860px;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .badge {
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      color: #ff7a59;
+      background: rgba(226, 88, 34, 0.15);
+      border: 1px solid rgba(226, 88, 34, 0.4);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      padding: 0.35rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 0.3rem;
+      background: linear-gradient(180deg, #ffffff 40%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .author {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--card-border);
+      padding: 2.2rem;
+      border-radius: 16px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      margin-bottom: 3.5rem;
+    }
+
+    .cover-wrapper {
+      text-align: center;
+    }
+
+    .book-cover {
+      width: 100%;
+      max-width: 280px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 30px rgba(226, 88, 34, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .book-cover:hover {
+      transform: scale(1.02);
+    }
+
+    .synopsis {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: 0.96rem;
+      color: #cbd5e1;
+    }
+
+    .tagline-quote {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #fff;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      margin-bottom: 0.5rem;
+      font-style: italic;
+    }
+
+    .synopsis p strong {
+      color: #fff;
+    }
+
+    footer {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--card-border);
+      padding-top: 1.8rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+        gap: 1.8rem;
+      }
+
+      .cover-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+
+      .book-cover {
+        max-width: 220px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-blur"></div>
+  <div class="bg-overlay"></div>
+
+  <div class="container">
+    <header>
+      <span class="badge">Coming November 2026</span>
+      <h1>Counted</h1>
+      <div class="author">by Johannes Smits</div>
+    </header>
+
+    <div class="hero-grid">
+      <div class="cover-wrapper">
+        <img src="cover.jpg" alt="Counted by Johannes Smits Book Cover" class="book-cover">
+      </div>
+      
+      <div class="synopsis">
+        <div class="tagline-quote">
+          "The ledger is open. Everything is counted."
+        </div>
+        <p>
+          The ship is running out of everything. Air, water, reaction mass — four lines on a graph, all bending the same way. The war Mala started isn't something she can finish on fumes.
+        </p>
+        <p>
+          The Hub is a trade station older than humanity's membership in the federation that built it. Fuel, materials, fabrication stock — everything she needs, administered by the species that rescued her kind and logged the favour as an investment. They know her name before she transmits it. They know what she did before she arrives. The welcome is warm, and the bill is already running.
+        </p>
+        <p>
+          She came for supplies. She found a bounty on the targets she'd already destroyed, a political architecture nobody told her about, and a question buried in the federation's own archives that nobody had thought to ask — or been allowed to.
+        </p>
+        <p>
+          <strong>One ship, rebuilt in crystal.</strong> One AI who can feel the weather now. A species she was told to hate, met face to face over tea. And a war that turns out to have been someone else's arithmetic all along.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      &copy; Johannes Smits. All rights reserved.
+    </footer>
+  </div>
+
+</body>
+</html>
